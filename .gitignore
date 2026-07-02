@@ -4,9 +4,11 @@
 *.obj
 *.out
 
-# VS Code / IDE temporary files
-.vscode/ipch/
-.vscode/.browse.VC.db
-.vscode/browse.vc.db
+# Scripts and utility files
+sync.bat
+
+# VS Code / IDE temporary and configuration files
+.vscode/
 *.log
 tempCodeRunnerFile*
+
