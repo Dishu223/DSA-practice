@@ -1,0 +1,12 @@
+# Compiled binaries
+*.exe
+*.o
+*.obj
+*.out
+
+# VS Code / IDE temporary files
+.vscode/ipch/
+.vscode/.browse.VC.db
+.vscode/browse.vc.db
+*.log
+tempCodeRunnerFile*
