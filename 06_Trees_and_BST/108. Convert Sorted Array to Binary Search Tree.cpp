@@ -27,10 +27,12 @@ public:
   }
 };
 
-// We are given sorted array,
-// which is the same as INORDER TRAVERSAL OF A BST!
-// So, we can construct a BST from sorted array by picking the middle element as
-// the root and recursively constructing the left and right subtrees.
-// In this way, the tree will be height balanced.
-// Time complexity: O(N)
-// Space complexity: O(log N) for recursion stack
+/*
+ We are given sorted array,
+ which is the same as INORDER TRAVERSAL OF A BST!
+ So, we can construct a BST from sorted array by picking the middle element as
+ the root and recursively constructing the left and right subtrees.
+ In this way, the tree will be height balanced.
+ Time complexity: O(N)
+ Space complexity: O(log N) for recursion stack
+*/
