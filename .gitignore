@@ -6,6 +6,7 @@
 
 # Scripts and utility files
 sync.bat
+sync.ps1
 
 # VS Code / IDE temporary and configuration files
 .vscode/
