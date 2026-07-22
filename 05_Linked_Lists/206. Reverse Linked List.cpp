@@ -24,11 +24,12 @@ public:
     // }
     // return prev;
 
-    if (head == NULL || head->next == NULL)
+    if (!head || !head->next)
       return head;
-    ListNode *last = reverseList(head->next);
+    ListNode *newHead = reverseList(head->next);
     head->next->next = head;
-    head->next = NULL;
-    return last;
+    head->next = nullptr;
+
+    return newHead;
   }
 };
