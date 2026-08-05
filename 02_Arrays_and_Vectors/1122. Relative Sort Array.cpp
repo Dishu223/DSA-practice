@@ -23,3 +23,14 @@ public:
     return arr1;
   }
 };
+
+/*
+ * Time Complexity: O(N log K + M) - Where N is arr1 size, K is unique elements
+ * in arr1 (stored in std::map), and M is arr2 size. Space Complexity: O(K) -
+ * Auxiliary space for storing element frequency map..
+ *
+ * Summary:
+ * Counted frequencies of arr1 elements in a ordered map, populated arr1 using
+ * the exact relative order defined in arr2, then appended remaining elements in
+ * ascending order directly from the map.
+ */
