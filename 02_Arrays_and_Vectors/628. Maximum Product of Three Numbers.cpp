@@ -20,3 +20,12 @@ public:
     return result;
   }
 };
+
+/*
+ * Time Complexity: O(N log N) - Sorting the array of length N.
+ * Space Complexity: O(1) auxiliary space (or O(log N) stack space for sorting).
+ *
+ * Summary:
+ * Sorted array to easily compare the product of the 3 largest numbers versus 
+ * the product of the 2 smallest (potentially negative) numbers and the largest positive number.
+ */
