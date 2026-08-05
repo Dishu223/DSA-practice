@@ -20,3 +20,12 @@ public:
     }
   }
 };
+
+/*
+ * Time Complexity: O(m + n) - Single pass filling elements from right to left.
+ * Space Complexity: O(1) - Constant space since merge is done directly in nums1.
+ *
+ * Summary:
+ * Merged nums2 into nums1 in-place by comparing elements from the back of both arrays
+ * and writing the larger element to the end of nums1 to avoid overwriting existing data.
+ */
