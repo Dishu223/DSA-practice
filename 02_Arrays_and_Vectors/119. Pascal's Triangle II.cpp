@@ -14,10 +14,12 @@ public:
 };
 
 /*
- * Time Complexity: O(rowIndex^2) - Nested loops calculating values up to row index.
- * Space Complexity: O(1) auxiliary space (O(rowIndex) space for returning the result vector).
+ * Time Complexity: O(rowIndex^2) - Nested loops calculating values up to row
+ * index. Space Complexity: O(1) auxiliary space (O(rowIndex) space for
+ * returning the result vector)..
  *
  * Summary:
- * Generates the k-th index row of Pascal's Triangle in-place by updating a single 1D vector 
- * backwards from right to left to prevent overwriting values needed for calculation.
- */
+ * Generates the k-th index row of Pascal's Triangle in-place by updating a
+ * single 1D vector backwards from right to left to prevent overwriting values
+ * needed for calculation.
+ */
