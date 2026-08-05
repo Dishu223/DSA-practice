@@ -16,3 +16,12 @@ public:
     return (min_size == INT_MAX) ? 0 : min_size;
   }
 };
+
+/*
+ * Time Complexity: O(N) - Each element is visited at most twice (once by window_end and once by window_start).
+ * Space Complexity: O(1) - Constant auxiliary space.
+ *
+ * Summary:
+ * Used a variable-size sliding window to expand window_end until sum >= target,
+ * then shrank window_start to find the minimal contiguous subarray length fulfilling the target condition.
+ */
