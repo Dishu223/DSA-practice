@@ -19,7 +19,7 @@ public:
 /*
  * Time Complexity: O(N) - Traversing digits array from right to left once.
  * Space Complexity: O(1) auxiliary space (or O(N) in worst case when adding
- * leading 1 for all 9s)..
+ * leading 1 for all 9s).
  *
  * Summary:
  * Incremented the large integer represented by digits by starting from the
