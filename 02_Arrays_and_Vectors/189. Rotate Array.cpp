@@ -17,10 +17,12 @@ public:
 };
 
 /*
- * Time Complexity: O(N) - Total traversal visits each element a constant number of times (3 reversals).
- * Space Complexity: O(1) - Performed in-place without using extra array memory.
+ * Time Complexity: O(N) - Total traversal visits each element a constant number
+ * of times (3 reversals). Space Complexity: O(1) - Performed in-place without
+ * using extra array memory..
  *
  * Summary:
- * Rotates array right by k steps using 3 reversals: first reverse the entire array,
- * then reverse the first k elements, and finally reverse the remaining n-k elements.
- */
+ * Rotates array right by k steps using 3 reversals: first reverse the entire
+ * array, then reverse the first k elements, and finally reverse the remaining
+ * n-k elements.
+ */
