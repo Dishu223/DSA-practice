@@ -17,10 +17,11 @@ public:
 };
 
 /*
- * Time Complexity: O(N) - Single pass iteration through the prices array of size N.
- * Space Complexity: O(1) - Constant auxiliary space used.
+ * Time Complexity: O(N) - Single pass iteration through the prices array of
+ * size N. Space Complexity: O(1) - Constant auxiliary space used..
  *
  * Summary:
  * Tracked the minimum buy price seen so far while traversing stock prices,
- * updating the maximum potential profit at each step if sold on the current day.
- */
+ * updating the maximum potential profit at each step if sold on the current
+ * day.
+ */
