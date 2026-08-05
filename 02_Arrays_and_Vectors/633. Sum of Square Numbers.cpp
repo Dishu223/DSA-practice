@@ -16,3 +16,12 @@ public:
     return false;
   }
 };
+
+/*
+ * Time Complexity: O(sqrt(c)) - Two pointers move towards each other between 0 and sqrt(c).
+ * Space Complexity: O(1) - Constant auxiliary space.
+ *
+ * Summary:
+ * Utilized a two-pointer approach from left=0 to right=sqrt(c) to efficiently find if two square numbers 
+ * sum up to c by adjusting pointers based on whether current sum is smaller or larger than c.
+ */
