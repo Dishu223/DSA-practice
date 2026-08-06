@@ -67,3 +67,20 @@ public:
     return path;
   }
 };
+
+/*
+================================================================================
+Approach Summary: Lexicographically Smallest Shortest Path (Reverse Dijkstra + Tracing)
+================================================================================
+- Problem: Find shortest path from `src` to `dest`. If multiple shortest paths exist, 
+  return the lexicographically smallest path.
+- Technique: 2-Step Approach (Reverse Dijkstra + Greedy Forward Path Reconstruction).
+- Step 1: Run Dijkstra starting from `dest` to calculate shortest distance from `dest` 
+  to every node.
+- Step 2: Trace forward starting from `src`. At node `curr`, select neighboring node `adjNode` 
+  satisfying edge relaxation condition `result[curr] == result[adjNode] + wt`. If multiple neighbors 
+  satisfy this, pick the smallest neighbor node index `adjNode < nextNode` for lexicographical tie-breaking.
+- Time Complexity: O(E log V)
+- Space Complexity: O(V + E) for adjacency list vector, distance vector, and priority queue.
+================================================================================
+*/
