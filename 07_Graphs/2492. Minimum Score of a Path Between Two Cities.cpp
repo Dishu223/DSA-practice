@@ -34,3 +34,18 @@ public:
     return result;
   }
 };
+
+/*
+================================================================================
+Approach Summary: Minimum Score of a Path Between Two Cities (DFS Traversal)
+================================================================================
+- Key Insight: A path between city 1 and city n exists if they are in the same connected component. 
+  The minimum score is simply the MINIMUM weight among ALL edges present in that entire component.
+- Technique: Recursive DFS.
+- Process: Build weighted undirected graph adjacency list `adj[u] = {v, weight}`. 
+  Start DFS from node 1. For every edge `(u, v, d)` traversed during DFS, update 
+  `result = min(result, d)`. Visit all reachable nodes in the component.
+- Time Complexity: O(V + E)
+- Space Complexity: O(V + E) for adjacency list, visited vector, and recursion stack.
+================================================================================
+*/
