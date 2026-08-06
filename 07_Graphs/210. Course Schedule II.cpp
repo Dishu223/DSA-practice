@@ -42,3 +42,17 @@ public:
     return {};
   }
 };
+
+/*
+================================================================================
+Approach Summary: Course Schedule II (Topological Order via Kahn's Algorithm)
+================================================================================
+- Problem: Return the valid ordering of courses to take to finish all courses.
+- Technique: Kahn's Algorithm (BFS Topological Sort).
+- Process: Build graph `v -> u` (prerequisite `v` to course `u`). Track indegrees. 
+  Enqueue 0-indegree courses. Run BFS pushing popped elements into `result` vector. 
+  If `count == n`, return `result`; otherwise return empty array `{}`.
+- Time Complexity: O(V + E) where V = numCourses, E = prerequisites.size().
+- Space Complexity: O(V + E) for adjacency list, indegree array, queue, and result vector.
+================================================================================
+*/
