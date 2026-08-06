@@ -50,3 +50,17 @@ public:
     return maxi;
   }
 };
+
+/*
+================================================================================
+Approach Summary: Network Delay Time (Dijkstra's Algorithm)
+================================================================================
+- Problem: Find minimum time for all N nodes to receive a signal sent from node K.
+- Technique: Single-Source Shortest Path using Dijkstra's Algorithm.
+- Process: Compute shortest path distance from source node `k` to all other nodes 
+  1 to N using min-heap priority queue. Find the maximum distance in the `result` vector. 
+  If any node remains at `INT_MAX`, it is unreachable, so return -1; otherwise return the max distance.
+- Time Complexity: O(E log V)
+- Space Complexity: O(V + E) for adjacency list, distance array, and priority queue.
+================================================================================
+*/
