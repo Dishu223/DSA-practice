@@ -35,3 +35,16 @@ public:
     return result;
   }
 };
+
+/*
+================================================================================
+Approach Summary: BFS Traversal of Graph
+================================================================================
+- Technique: Queue-based Level-Order Traversal (Breadth-First Search).
+- Process: Enqueue starting node, mark visited, process queued nodes, and 
+  enqueue unvisited neighbors. Loop over all nodes 0 to N-1 to handle disconnected 
+  components.
+- Time Complexity: O(V + E) where V is vertices and E is edges.
+- Space Complexity: O(V) for the queue, visited array, and output result vector.
+================================================================================
+*/
