@@ -36,3 +36,18 @@ public:
     return true;
   }
 };
+
+/*
+================================================================================
+Approach Summary: Is Graph Bipartite (BFS 2-Coloring)
+================================================================================
+- Concept: A graph is bipartite if nodes can be colored using 2 colors such that 
+  no two adjacent nodes share the same color (no odd-length cycles).
+- Technique: BFS Graph 2-Coloring.
+- Process: Maintain a `color` array initialized to -1. For each unvisited node, 
+  enqueue it with color 1. During BFS, assign neighboring nodes color `1 - color[u]`. 
+  If neighbor already has `color[v] == color[u]`, return false (conflict).
+- Time Complexity: O(V + E)
+- Space Complexity: O(V) for color vector and BFS queue.
+================================================================================
+*/
