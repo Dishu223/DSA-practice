@@ -59,3 +59,18 @@ public:
     return result;
   }
 };
+
+/*
+================================================================================
+Approach Summary: Count Unreachable Pairs of Nodes in Undirected Graph (DSU)
+================================================================================
+- Concept: Nodes in different connected components cannot reach each other. 
+  For a component of size S with R remaining nodes overall, it forms `S * (R - S)` 
+  unreachable pairs with all nodes outside its component.
+- Technique: DSU for grouping connected components + Combinatorics.
+- Process: Union all edges. Count size of each component in a hash map `mp[findParent(i)]++`. 
+  Iterate through sizes S, computing `result += S * (remain - S)` and reducing `remain -= S`.
+- Time Complexity: O(N + E * α(N))
+- Space Complexity: O(N) for parent, rank, and component frequency map.
+================================================================================
+*/
