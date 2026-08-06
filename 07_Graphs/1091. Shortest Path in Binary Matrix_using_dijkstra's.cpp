@@ -48,3 +48,17 @@ public:
     return result[m - 1][n - 1] + 1;
   }
 };
+
+/*
+================================================================================
+Approach Summary: Shortest Path in Binary Matrix (Dijkstra's Algorithm)
+================================================================================
+- Problem: Find shortest clear path in an 8-directional binary grid using Dijkstra's algorithm.
+- Technique: Dijkstra's Algorithm on 2D Grid with Min-Heap Priority Queue.
+- Process: Maintain 2D `result` matrix initialized to `INT_MAX`. Priority queue stores 
+  tuples `{distance, {x, y}}`. Treat each valid step in 8 directions as an edge of weight 1. 
+  Relax distances `if (d + 1 < result[x_][y_])`. At the end, return `result[m-1][n-1] + 1`.
+- Time Complexity: O(M * N log(M * N)) due to Priority Queue pushes.
+- Space Complexity: O(M * N) for distance matrix and priority queue.
+================================================================================
+*/
