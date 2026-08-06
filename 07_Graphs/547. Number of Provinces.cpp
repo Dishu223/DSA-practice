@@ -110,3 +110,19 @@ public:
     return count;
   }
 };
+
+/*
+================================================================================
+Approach Summary: Number of Provinces (Connected Components)
+================================================================================
+- Problem: Find total number of connected components in an N x N adjacency matrix.
+- Approach 1 (DFS): Iterate over 0..N-1. If node is unvisited, launch DFS traversing 
+  matrix row `isConnected[node][v] == 1` and increment component `count`.
+- Approach 2 (BFS with Map): Build adjacency map from matrix, then launch BFS for 
+  unvisited nodes.
+- Approach 3 (BFS without extra graph): Launch BFS directly scanning `isConnected[u][v] == 1` 
+  without constructing separate adjacency list/map.
+- Time Complexity: O(N^2) to scan the matrix.
+- Space Complexity: O(N) for visited vector and queue/stack recursion.
+================================================================================
+*/
