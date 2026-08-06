@@ -80,3 +80,19 @@ public:
     return result;
   }
 };
+
+/*
+================================================================================
+Approach Summary: Topological Sort (DFS & BFS Kahn's Algorithm)
+================================================================================
+- Concept: Linear ordering of vertices such that for every directed edge u -> v, 
+  vertex u comes before vertex v in the ordering (Valid only for DAGs).
+- Approach 1 (DFS): Complete DFS for each node, pushing nodes to stack POST-recursion. 
+  Popping stack gives topological order.
+- Approach 2 (BFS - Kahn's Algorithm): Calculate indegrees for all nodes. Enqueue 
+  nodes with indegree == 0. Pop front, add to result, and decrement indegrees of neighbors. 
+  Enqueue neighbors when their indegree becomes 0.
+- Time Complexity: O(V + E) for both methods.
+- Space Complexity: O(V + E) for adjacency list, visited/indegree vector, and stack/queue.
+================================================================================
+*/
