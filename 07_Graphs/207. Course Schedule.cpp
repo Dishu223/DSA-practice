@@ -41,3 +41,18 @@ public:
     return count == n ? true : false;
   }
 };
+
+/*
+================================================================================
+Approach Summary: Course Schedule (Cycle Detection via Kahn's BFS Topo Sort)
+================================================================================
+- Problem: Determine if all courses can be finished given prerequisite pairs [v, u] (u -> v).
+- Technique: Kahn's Algorithm for Topological Sorting / Cycle Detection.
+- Process: Construct directed graph `u -> v` where prerequisite `u` points to `v`. 
+  Calculate indegrees. Enqueue nodes with indegree == 0. Run BFS, incrementing `count` 
+  for each popped node and decrementing neighbors' indegrees. If `count == n`, 
+  all courses can be taken (no cycle).
+- Time Complexity: O(V + E) where V = numCourses, E = prerequisites.size().
+- Space Complexity: O(V + E) for graph adjacency list, indegree vector, and queue.
+================================================================================
+*/
