@@ -53,3 +53,18 @@ public:
     return components - 1;
   }
 };
+
+/*
+================================================================================
+Approach Summary: Number of Operations to Make Network Connected (DSU)
+================================================================================
+- Key Insight: To connect N nodes into 1 connected component, at least N - 1 edges 
+  are required. If total connections < N - 1, return -1.
+- Technique: Disjoint Set Union (DSU) Component Counting.
+- Process: Initialize `components = n`. For each edge `(u, v)`, check if `find(u) != find(v)`. 
+  If different sets, perform `unionn(u, v)` and decrement `components--`. 
+  Minimum operations needed to connect all components is `components - 1`.
+- Time Complexity: O(E * α(V))
+- Space Complexity: O(V) for DSU parent and rank arrays.
+================================================================================
+*/
