@@ -39,3 +39,19 @@ public:
     return result;
   }
 };
+
+/*
+================================================================================
+Approach Summary: Dijkstra's Shortest Path Algorithm
+================================================================================
+- Concept: Single-Source Shortest Path (SSSP) algorithm for non-negative edge weighted graphs.
+- Technique: Greedily process nearest node using Min-Heap Priority Queue.
+- Process: Maintain distance vector initialized to `INT_MAX`, set `result[src] = 0`. 
+  Push `{0, src}` to priority queue `std::priority_queue<pair<int, int>, ..., greater<...>>`. 
+  Pop element `{d, node}`. If `d > result[node]`, skip (outdated distance). 
+  Otherwise relax edge `(node, adjNode, wt)`: if `d + wt < result[adjNode]`, update distance 
+  and push `{d + wt, adjNode}`.
+- Time Complexity: O(E log V)
+- Space Complexity: O(V + E) for adjacency list, distance array, and priority queue.
+================================================================================
+*/
