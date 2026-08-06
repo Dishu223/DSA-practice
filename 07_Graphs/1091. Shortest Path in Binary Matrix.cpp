@@ -47,3 +47,18 @@ public:
     return -1;
   }
 };
+
+/*
+================================================================================
+Approach Summary: Shortest Path in Binary Matrix (Level-Order BFS)
+================================================================================
+- Problem: Find shortest clear path from top-left (0,0) to bottom-right (m-1, n-1) 
+  in an 8-directional binary grid where 0 indicates open cell and 1 indicates blocked.
+- Technique: BFS Level-Order Traversal (Unweighted grid shortest path).
+- Process: Check base conditions (`grid[0][0] != 0`). Queue starting point `(0,0)` and mark 
+  `grid[0][0] = 1` in-place to prevent revisit. Perform level-by-level BFS exploring all 8 
+  directions (`dx, dy \in {-1, 0, 1}`). Return `level + 1` as soon as target cell is reached.
+- Time Complexity: O(M * N) where M and N are grid dimensions.
+- Space Complexity: O(M * N) for the BFS queue.
+================================================================================
+*/
