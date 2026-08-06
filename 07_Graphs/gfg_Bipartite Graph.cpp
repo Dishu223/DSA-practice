@@ -35,3 +35,18 @@ public:
     return true;
   }
 };
+
+/*
+================================================================================
+Approach Summary: Bipartite Graph Check (DFS 2-Coloring)
+================================================================================
+- Concept: Divide vertices into 2 independent sets such that every edge connects 
+  a vertex in set 1 to a vertex in set 2.
+- Technique: DFS Graph 2-Coloring.
+- Process: First convert edge list to adjacency list map. Use color array (-1 uncolored). 
+  Recursively assign `newColor = 1 - currColor` to neighbors. If neighbor `color[v] == color[curr]`, 
+  return false immediately.
+- Time Complexity: O(V + E)
+- Space Complexity: O(V + E) for adjacency list map and DFS call stack.
+================================================================================
+*/
