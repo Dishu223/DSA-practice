@@ -25,3 +25,16 @@ public:
     return result;
   }
 };
+
+/*
+================================================================================
+Approach Summary: DFS Traversal of Graph
+================================================================================
+- Technique: Recursive Depth-First Search (DFS).
+- Process: Mark current node visited, add to result, and recursively visit all 
+  unvisited neighbors. Outer loop from 0 to N-1 ensures disconnected components 
+  are fully covered.
+- Time Complexity: O(V + E) where V is vertices and E is edges.
+- Space Complexity: O(V) for visited array, result vector, and recursion stack.
+================================================================================
+*/
