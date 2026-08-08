@@ -12,17 +12,20 @@
  */
 class Solution {
 public:
-  bool isSymmetrical(TreeNode *left, TreeNode *right) {
-    if (!left && !right)
+  bool isMirror(TreeNode *t1, TreeNode *t2) {
+    if (!t1 && !t2)
       return true;
-    if (!left || !right)
+    if (!t1 || !t2)
       return false;
-    if (left->val == right->val && isSymmetrical(left->left, right->right) &&
-        isSymmetrical(left->right, right->left))
-      return true;
-    return false;
+
+    return ((t1->val == t2->val) &&
+            (isMirror(t1->left, t2->right) && isMirror(t1->right, t2->left)));
   }
+
   bool isSymmetric(TreeNode *root) {
-    return isSymmetrical(root->left, root->right);
+    if (!root)
+      return true;
+
+    return (isMirror(root->left, root->right));
   }
 };
